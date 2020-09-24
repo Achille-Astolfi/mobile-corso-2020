@@ -51,8 +51,11 @@ public class CorsoMobileFrontConfig implements WebMvcConfigurer {
 		InternalResourceViewResolver delegate = internalResourceViewResolver();
 		LiteDeviceDelegatingViewResolver resolver = new LiteDeviceDelegatingViewResolver(delegate);
 		resolver.setMobilePrefix("mobile/");
+		resolver.setMobileSuffix("-mobile");
 		resolver.setTabletPrefix("normal/");
+		resolver.setTabletSuffix("-normal");
 		resolver.setNormalPrefix("normal/");
+		resolver.setNormalSuffix("-normal");
 //		delegate.setViewClass(CheckingJstlView.class);
 //		resolver.setEnableFallback(true);
 		return resolver;
